@@ -1,0 +1,32 @@
+{
+    "Sterling_Ranch":{
+       "lat":39.50185523899997,
+       "lon":-105.03840565681458,
+       "zoom":14,
+       "id":"Sterling_Ranch",
+       "info":"Sterling Ranch is routinely flown with drone imagery to capture construction progress.  You can see below the escalation of construrcion between Oct 2018 (left) and June 2019 (right)",
+       "name":"Sterling Ranch",
+       "url":"sterlingRanch/index.html",
+       "comment":"<ul><li><b>AzTec Departments Utilized: </b>Professional Services, Construction, Housing, GIS, Utility Locates</li><li><b>Developer: </b>Sterling Ranch, LLC</li><li><b>Size:</b> 3,400 Acres</li><li><b>Projected Build Out:</b> 12,000 homes</li><li><b>Location: </b>Douglas County, CO</li><li><b>Builder: </b>Multiple (8 Total)</li></ul>"
+    },
+    "lyonsRidge":{
+       "lat":39.626125415,
+       "lon":-105.170602718,
+       "zoom":14,
+       "id":"lyonsRidge",
+       "info":"One of the more picturesque projects done recently.  Lyons ridge offers the opportunity to work within the foothills just west of Denver, CO.",
+       "name":"Lyons Ridge",
+       "url":"lyonsRidge/index.html",
+       "comment":"<ul><li><b>AzTec Departments Utilized:</b> Professional Services, Construction, Housing, Utility Locates</li><li><b>Developer:</b>Shea Properties</li><li><b>Size:</b>283 Acres</li><li><b>Project Build Out:</b> 230 Homes</li><li><b>Location:</b>Morrison, CO</li><li><b>Builder:</b>Multiple</li></ul>"
+    },
+    "chatfield":{
+       "lat":39.544580321,
+       "lon":-105.064087467,
+       "zoom":14,
+       "id":"chatfield",
+       "info":"The Chatfield Reservoir Expansion included a large restructure of the existing swim beach and parking facilites.  View the before and after imagery below.",
+       "name":"Chatfield Reservoir Expansion",
+       "url":"chatfield/chatfieldSlider.html",
+       "comment":"<ul><li><b>AzTec Departments Utilized: </b>Professional Services, Construction</li><li><b>Owner&amp; Developer: </b>Chatfield Reservoir Mitigation Company, Inc.</li><li><b>Previous Storage of Resevoir:</b> 350,000 Acre-Feet</li><li><b>Storage Expansion Addition:</b> 20,600 Acre-Feet</li><li><b>Location:</b> Douglas & Jefferson Counties, CO</li><li><b>Partners:</b> HDR Engineering, Muller Engineering, The Greenway Foundation, Mortenson Construction </li></ul>"
+    }
+ }

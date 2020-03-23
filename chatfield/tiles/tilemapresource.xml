@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TileMap version="1.0.0" tilemapservice="http://tms.osgeo.org/1.0.0">
+      <Title>CHATFIELD_modified.tif</Title>
+      <Abstract></Abstract>
+      <SRS>EPSG:3857</SRS>
+      <BoundingBox minx="-105.09012932210712" miny="39.53888982754831" maxx="-105.07549419004677" maxy="39.54609545377524"/>
+      <Origin x="-105.09012932210712" y="39.53888982754831"/>
+      <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
+      <TileSets profile="mercator">
+        <TileSet href="18" units-per-pixel="0.59716428337097" order="18"/>
+      </TileSets>
+    </TileMap>
+    

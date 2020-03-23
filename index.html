@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <title>AzTec Inc. Projects</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3 col-md-3 main">
+                <div class="page-header-div d-flex p-2 text-center">
+                    <img src="img/logo-aztec-consultants.jpg" alt="AzTec Inc Logo" height="70" width="300"
+                        class='img-fluid'>
+
+                </div>
+
+                <section class='overview notViewing' data-place="overview">
+                    <p>We provide full-service, professional land surveying that keeps our clients at the center of our
+                        solutions. Working with Builders, Developers, and Agencies across the State of Colorado, AzTec
+                        offers an unparalleled familiarity with local and state laws and standards of practice. We have
+                        strong working relationships with local, governmental, and federal agencies to ensure that our
+                        deliverables will meet the required standards, easing the stress of our client and facilitating
+                        the coordination of the overall project.</p>
+                </section>
+
+
+                <section class='notViewing' data-place="Sterling_Ranch">
+                    <h2>Sterling Ranch</h2>
+                    <p>Sterling Ranch is a 3,400 acre Master Plan community located in Northern Douglas County. Upon
+                        completion, the community will feature nine unique villages radiating outward from its town
+                        center that features rich amenities and civic gathering places. The homes will come from a
+                        multitude of home builders to create a diverse assortment of architectural styles that blend
+                        with the natural surroundings of the area. AzTec has utilized resources from each of its
+                        departments to aid in the continual growth of this innovative community. Personnel have had
+                        affiliation since the project’s conception more than 15 years ago and have substantially
+                        contributed to the processes required to bring the vision of this active community to fruition.
+                    </p>
+                </section>
+
+                <section class='notViewing' data-place="chatfield">
+                    <h2>Chatfield Reservoir Expansion</h2>
+                    <p>Chatfield Reservoir was built in 1975 as a flood control measure along the South Platte River.
+                        Although the main function of the reservoir began as flood prevention, the reservoir also acts
+                        as a conservation area, recreation area, and provides storage for local water utilities.</p>
+                    <p>Fast forward to today, booming population growth in the state of Colorado is putting strain on
+                        water resources. The expansion of Chatfield Reservoir is a project with the aim of aiding
+                        Colorado's future water security.</p>
+                </section>
+
+                <section class='notViewing' data-place="lyonsRidge">
+                    <h2>Lyons Ridge</h2>
+                    <p>Tucked behind the Dakota Hogback with the Rocky Mountain foothills rising to the west, this
+                        development is one of the few within the Morrison area. Lyons Ridge was designed to accommodate
+                        lots for larger homes, open spaces, and a planned development district. This development
+                        presented unique challenges as our surveyors balanced preserving outdoor recreation areas, while
+                        supporting the project. The result is one of the most scenic and well thought out developments
+                        in the Front Range. </p>
+                    <p>Survey grade aerial imagery was collected using an UAV. That imagery facilitated the mapping of
+                        ALTA, Plat, and Topographic surveys for Lyons Ridge. This process is the future of surveying, as
+                        more information can be collected in less time than traditional methods. AzTec continues to
+                        embrace and utilize the latest in modern surveying technology.</p>
+
+                </section>
+            </div>
+
+            <div id="map" class="col-sm-9 col-md-9 sidebar">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- The Modal -->
+        <div class="modal fade left" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-center">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/storymap.js"></script>
+    <script type="text/javascript">
+        /**
+         * Helper function to look for valid JSON arrays
+         *  
+         * @param {object} strIn - object or array of data
+         * 
+         * @return true/false
+         **/
+
+        function IsValidJSONString(str) {
+            try {
+                JSON.parse(str);
+            } catch (e) {
+                return false;
+            }
+            return true;
+        }
+
+        /**
+         * Get Json file of data
+         *  
+         * @param {void}
+         * 
+         * @return {array} responsedata - array of json data
+         **/
+
+        async function getData() {
+            let responsedata = [];
+            try {
+                const response = await $.getJSON({
+                    url: 'data/data.json',
+                    dataType: 'text'
+                }).done(function (data) {
+                    //console.log(data)
+                    let test = IsValidJSONString(data);
+                    if (test == true) {
+                        responsedata = $.parseJSON(data);
+                    }
+                })
+            } catch (error) {
+                console.log(error);
+            }
+            return responsedata;
+        }
+
+        $(async function () {
+
+            // get marker data
+            let markers = await getData();
+
+            //create story map, with marker data
+            $('.main').storymap({
+                markers: markers
+            });
+
+            // on click of button in popup launch bootstrap modal window on the right.
+            $(document).on("click", ".btn", function () {
+                //get id of object clicked
+                let id = $(this).attr('id')
+                //reset modal body incase it's populated
+                $('.modal-body').html('');
+                //Set modal header
+                let modalName = markers[id].name
+                $('.modal-title').html(modalName);
+                //set modal body text dynamically from url in json object)
+                let modalBodyText = `<p>${markers[id].info}</p>`
+                modalBodyText +=
+                    `<div class = 'iframe-container'><iframe src="${markers[id].url}" frameBorder="0" scrolling="no"></iframe></div>`;
+
+                $('#myModal').modal('show');
+
+                //on modal show event add modal body text to modal body
+                $('#myModal').on('shown.bs.modal', function () {
+                    $('.modal-body').html(modalBodyText);
+                })
+
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>

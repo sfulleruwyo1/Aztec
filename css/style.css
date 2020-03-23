@@ -1,0 +1,163 @@
+.sidebar {
+    /* display: none;*/
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+.main {
+    padding: 20px;
+
+    padding-bottom: 500px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+.breakpoint-current {
+    left: 0;
+    margin-top: -10px;
+    position: fixed;
+    /* top: 33.3333%; */
+    width: 3px;
+    height: 3px;
+
+    ;
+}
+
+.viewing {
+    background: #eee;
+    opacity: 1 !important;
+}
+
+.notViewing {
+    opacity: 0.4;
+}
+
+section {
+    padding: 5px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.page-header-div {
+    position: -webkit-sticky !important;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white !important;
+    transition-duration: 4s;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+    opacity: 1 !important;
+    z-index: 999;
+}
+
+.overview {
+    margin-top: 30px;
+}
+
+.leaflet-popup-content-wrapper {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(114, 2, 2, 1) 25%, rgba(114, 2, 2, 1) 50%, rgba(114, 2, 2, 1) 75%, rgba(0, 0, 0, 1) 100%);
+    color: white !important;
+    border-radius: 0 !important;
+}
+
+.leaflet-popup-content {
+    border-radius: 0 !important;
+}
+
+.leaflet-popup-tip {
+    background-color: rgb(114, 2, 2);
+}
+
+.leaflet-popup-close-button {
+    color: white !important;
+}
+
+.modal.left .modal-dialog {
+    position: fixed;
+    right: 0;
+    margin: auto;
+    width: 50% !important;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    max-width: 1200px !important;
+}
+
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+.modal.right.fade .modal-dialog {
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+    right: 0;
+}
+
+@media (min-width: 1200px) {
+    .modal-xlg {
+        width: 90% !important;
+    }
+}
+
+.modal-content {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    height: 90%;
+}
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+

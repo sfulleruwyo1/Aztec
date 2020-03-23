@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head />
+<meta charset="utf-8">
+<title>Sterling Ranch Before-After</title>
+
+<head>
+
+    <style>
+        .map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+
+    <!-- Setup Before-After Plugin dependencies -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    <!-- Setup Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="js/jquery.beforeafter-map-0.11.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <!-- Create a map container div and divs for your two maps -->
+    <div id="map-container">
+        <!-- Make sure to give the map divs height and width -->
+        <div id="before" class="map"></div>
+        <div id="after" class="map"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var center = [39.50185523899997, -105.03840565681458];
+            var zoom = 17;
+            var before = L.map('before', {
+                attributionControl: false,
+                inertia: false,
+                minZoom: 17,
+                maxZoom: 18
+            }).setView(center, zoom);
+            var after = L.map('after', {
+                inertia: false,
+                minZoom: 17,
+                maxZoom: 18
+            }).setView(center, zoom);
+            L.tileLayer('oldTiles/{z}/{x}/{y}.png', {
+                tms: true,
+                opacity: 0.7,
+                attribution: "",
+                minZoom: 11,
+                maxZoom: 20
+            }).addTo(before);
+            L.tileLayer('SR/{z}/{x}/{y}.png', {
+                tms: true,
+                opacity: 0.7,
+                attribution: "",
+                minZoom: 17,
+                maxZoom: 18
+            }).addTo(after);
+
+            $('#map-container').beforeAfter(before, after);
+
+            //before.dragging.disable();
+            //after.dragging.disable();
+        });
+    </script>
+
+</body>
+
+</html>
